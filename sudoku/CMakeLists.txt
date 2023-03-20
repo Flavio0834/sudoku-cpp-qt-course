@@ -9,6 +9,8 @@ find_package(Qt6 6.2 COMPONENTS Quick REQUIRED)
 
 qt_add_executable(appsudoku
     main.cpp
+    grid.h
+    grid.cpp
 )
 
 qt_add_qml_module(appsudoku
