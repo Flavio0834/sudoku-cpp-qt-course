@@ -1,28 +1,18 @@
 #include "grid.h"
+#include <iostream>
+#include <QList>
 
 Grid::Grid(QObject *parent)
     : QObject(parent)
 {
-    // Initialisation du tableau de la grille
-    for (int i = 0; i < 81;i++)
-    {
-            list[i] = 0;
-        }
-    }
-
-
-int Grid::getValue(int id)
-{
-    return list[id];
+    QList<int> sudokuValues;
+    sudokuValues.fill(0, 81);
+    int selected = 0;
+    std::cout << selected << std::endl;
 }
 
-void Grid::setValue(int id, int value)
-{
-    list[id] = value;
-    // Mettre à jour l'affichage de la grille dans l'interface utilisateur
-    emit valueChanged(id, value);
-}
-void Grid::select(int id)
-{
-
+void Grid::select(int id) {
+    selected = id;
+    std::cout << id << std::endl;
+    emit sudokuValuesChanged();
 }
