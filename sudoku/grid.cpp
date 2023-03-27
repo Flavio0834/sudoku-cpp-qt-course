@@ -4,21 +4,25 @@ Grid::Grid(QObject *parent)
     : QObject(parent)
 {
     // Initialisation du tableau de la grille
-    for (int i = 0; i < 9; i++) {
-        for (int j = 0; j < 9; j++) {
-            matrix[i][j] = 0;
+    for (int i = 0; i < 81;i++)
+    {
+            list[i] = 0;
         }
     }
+
+
+int Grid::getValue(int id)
+{
+    return list[id];
 }
 
-int Grid::getValue(int row, int col)
+void Grid::setValue(int id, int value)
 {
-    return matrix[row][col];
-}
-
-void Grid::setValue(int row, int col, int value)
-{
-    matrix[row][col] = value;
+    list[id] = value;
     // Mettre à jour l'affichage de la grille dans l'interface utilisateur
-    emit valueChanged(row, col, value);
+    emit valueChanged(id, value);
+}
+void Grid::select(int id)
+{
+
 }

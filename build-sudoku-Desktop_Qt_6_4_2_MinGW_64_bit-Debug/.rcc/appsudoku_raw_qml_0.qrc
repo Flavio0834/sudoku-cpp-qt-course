@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/sudoku/">
+    <file alias="main.qml">C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/sudoku/main.qml</file>
+  </qresource>
+</RCC>
+

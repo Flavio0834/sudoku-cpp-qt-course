@@ -1,0 +1,160 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f1ca0ebdb90a2fd63ee1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "sudoku",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Debug-2126c60a3e9cfaa93c04.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_json-Debug-84554f788f0b56280085.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-3f88852de935db4d7ccb.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appsudoku::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appsudoku-Debug-0fc5c39b49d871f1168a.json",
+					"name" : "appsudoku",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appsudoku_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appsudoku_autogen-Debug-60fee069cc944894cddd.json",
+					"name" : "appsudoku_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appsudoku_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appsudoku_autogen_timestamp_deps-Debug-f728e222c699fc191027.json",
+					"name" : "appsudoku_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appsudoku_other_files::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appsudoku_other_files-Debug-ea3a1402978e7a062903.json",
+					"name" : "appsudoku_other_files",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appsudoku_qmlimportscan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appsudoku_qmlimportscan-Debug-34dc9e63d415ad9dcccd.json",
+					"name" : "appsudoku_qmlimportscan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appsudoku_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appsudoku_qmllint-Debug-ec4386a3ce50bc0b7f2f.json",
+					"name" : "appsudoku_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appsudoku_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appsudoku_qmllint_json-Debug-afe98123102f6ea91b72.json",
+					"name" : "appsudoku_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appsudoku_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appsudoku_qmltyperegistration-Debug-268fe1e2dba687a01e96.json",
+					"name" : "appsudoku_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appsudoku_tooling::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appsudoku_tooling-Debug-ce76be4c82eb459f8372.json",
+					"name" : "appsudoku_tooling",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug",
+		"source" : "C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/sudoku"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
