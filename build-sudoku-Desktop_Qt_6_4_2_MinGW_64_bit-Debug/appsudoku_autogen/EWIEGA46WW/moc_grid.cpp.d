@@ -1,5 +1,6 @@
 C:/Users/anton/OneDrive/Bureau/Cours/S8/Application\ en\ Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/appsudoku_autogen/EWIEGA46WW/moc_grid.cpp: C:/Users/anton/OneDrive/Bureau/Cours/S8/Application\ en\ Cpp/sudoku-elca11/sudoku/grid.h \
   C:/Users/anton/OneDrive/Bureau/Cours/S8/Application\ en\ Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/appsudoku_autogen/moc_predefs.h \
+  C:/Users/anton/Qt/6.4.2/mingw_64/include/QtCore/QList \
   C:/Users/anton/Qt/6.4.2/mingw_64/include/QtCore/QObject \
   C:/Users/anton/Qt/6.4.2/mingw_64/include/QtCore/qalgorithms.h \
   C:/Users/anton/Qt/6.4.2/mingw_64/include/QtCore/qanystringview.h \

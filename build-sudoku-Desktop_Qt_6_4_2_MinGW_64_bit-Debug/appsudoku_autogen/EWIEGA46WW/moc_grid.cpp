@@ -9,6 +9,7 @@
 #include <memory>
 #include "../../../sudoku/grid.h"
 #include <QtCore/qmetatype.h>
+#include <QtCore/QList>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'grid.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 68
@@ -26,37 +27,49 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_Grid_t {
-    uint offsetsAndSizes[16];
+    uint offsetsAndSizes[24];
     char stringdata0[5];
-    char stringdata1[13];
+    char stringdata1[20];
     char stringdata2[1];
-    char stringdata3[3];
-    char stringdata4[6];
+    char stringdata3[7];
+    char stringdata4[3];
     char stringdata5[9];
-    char stringdata6[9];
-    char stringdata7[7];
+    char stringdata6[16];
+    char stringdata7[11];
+    char stringdata8[9];
+    char stringdata9[4];
+    char stringdata10[9];
+    char stringdata11[11];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_Grid_t::offsetsAndSizes) + ofs), len 
 Q_CONSTINIT static const qt_meta_stringdata_Grid_t qt_meta_stringdata_Grid = {
     {
         QT_MOC_LITERAL(0, 4),  // "Grid"
-        QT_MOC_LITERAL(5, 12),  // "valueChanged"
-        QT_MOC_LITERAL(18, 0),  // ""
-        QT_MOC_LITERAL(19, 2),  // "id"
-        QT_MOC_LITERAL(22, 5),  // "value"
-        QT_MOC_LITERAL(28, 8),  // "getValue"
-        QT_MOC_LITERAL(37, 8),  // "setValue"
-        QT_MOC_LITERAL(46, 6)   // "select"
+        QT_MOC_LITERAL(5, 19),  // "sudokuValuesChanged"
+        QT_MOC_LITERAL(25, 0),  // ""
+        QT_MOC_LITERAL(26, 6),  // "select"
+        QT_MOC_LITERAL(33, 2),  // "id"
+        QT_MOC_LITERAL(36, 8),  // "getValue"
+        QT_MOC_LITERAL(45, 15),  // "getSudokuValues"
+        QT_MOC_LITERAL(61, 10),  // "QList<int>"
+        QT_MOC_LITERAL(72, 8),  // "setValue"
+        QT_MOC_LITERAL(81, 3),  // "val"
+        QT_MOC_LITERAL(85, 8),  // "loadGrid"
+        QT_MOC_LITERAL(94, 10)   // "cellValues"
     },
     "Grid",
-    "valueChanged",
+    "sudokuValuesChanged",
     "",
+    "select",
     "id",
-    "value",
     "getValue",
+    "getSudokuValues",
+    "QList<int>",
     "setValue",
-    "select"
+    "val",
+    "loadGrid",
+    "cellValues"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
@@ -67,28 +80,35 @@ Q_CONSTINIT static const uint qt_meta_data_Grid[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
-       0,    0, // properties
+       6,   14, // methods
+       1,   64, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    2,   38,    2, 0x06,    1 /* Public */,
+       1,    0,   50,    2, 0x06,    2 /* Public */,
 
  // methods: name, argc, parameters, tag, flags, initial metatype offsets
-       5,    1,   43,    2, 0x02,    4 /* Public */,
-       6,    2,   46,    2, 0x02,    6 /* Public */,
-       7,    1,   51,    2, 0x02,    9 /* Public */,
+       3,    1,   51,    2, 0x02,    3 /* Public */,
+       5,    1,   54,    2, 0x02,    5 /* Public */,
+       6,    0,   57,    2, 0x102,    7 /* Public | MethodIsConst  */,
+       8,    2,   58,    2, 0x02,    8 /* Public */,
+      10,    0,   63,    2, 0x02,   11 /* Public */,
 
  // signals: parameters
-    QMetaType::Void, QMetaType::Int, QMetaType::Int,    3,    4,
+    QMetaType::Void,
 
  // methods: parameters
-    QMetaType::Int, QMetaType::Int,    3,
-    QMetaType::Void, QMetaType::Int, QMetaType::Int,    3,    4,
-    QMetaType::Void, QMetaType::Int,    3,
+    QMetaType::Void, QMetaType::Int,    4,
+    QMetaType::Int, QMetaType::Int,    4,
+    0x80000000 | 7,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int,    4,    9,
+    QMetaType::Void,
+
+ // properties: name, type, flags
+      11, 0x80000000 | 7, 0x00015009, uint(0), 0,
 
        0        // eod
 };
@@ -100,22 +120,26 @@ Q_CONSTINIT const QMetaObject Grid::staticMetaObject = { {
     qt_static_metacall,
     nullptr,
     qt_incomplete_metaTypeArray<qt_meta_stringdata_Grid_t,
+        // property 'cellValues'
+        QtPrivate::TypeAndForceComplete<QList<int>, std::true_type>,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<Grid, std::true_type>,
-        // method 'valueChanged'
+        // method 'sudokuValuesChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        // method 'select'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         // method 'getValue'
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        // method 'getSudokuValues'
+        QtPrivate::TypeAndForceComplete<QList<int>, std::false_type>,
         // method 'setValue'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
-        // method 'select'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>
+        // method 'loadGrid'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
 } };
@@ -126,22 +150,43 @@ void Grid::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
         auto *_t = static_cast<Grid *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->valueChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
-        case 1: { int _r = _t->getValue((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])));
+        case 0: _t->sudokuValuesChanged(); break;
+        case 1: _t->select((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 2: { int _r = _t->getValue((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])));
             if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
-        case 2: _t->setValue((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
-        case 3: _t->select((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 3: { QList<int> _r = _t->getSudokuValues();
+            if (_a[0]) *reinterpret_cast< QList<int>*>(_a[0]) = std::move(_r); }  break;
+        case 4: _t->setValue((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
+        case 5: _t->loadGrid(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (Grid::*)(int , int );
-            if (_t _q_method = &Grid::valueChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            using _t = void (Grid::*)();
+            if (_t _q_method = &Grid::sudokuValuesChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 0;
                 return;
             }
         }
+    } else if (_c == QMetaObject::RegisterPropertyMetaType) {
+        switch (_id) {
+        default: *reinterpret_cast<int*>(_a[0]) = -1; break;
+        case 0:
+            *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QList<int> >(); break;
+        }
+    }
+else if (_c == QMetaObject::ReadProperty) {
+        auto *_t = static_cast<Grid *>(_o);
+        (void)_t;
+        void *_v = _a[0];
+        switch (_id) {
+        case 0: *reinterpret_cast< QList<int>*>(_v) = _t->getSudokuValues(); break;
+        default: break;
+        }
+    } else if (_c == QMetaObject::WriteProperty) {
+    } else if (_c == QMetaObject::ResetProperty) {
+    } else if (_c == QMetaObject::BindableProperty) {
     }
 }
 
@@ -164,22 +209,26 @@ int Grid::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 6;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 6)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 4;
+        _id -= 6;
+    }else if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
+            || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
+            || _c == QMetaObject::RegisterPropertyMetaType) {
+        qt_static_metacall(this, _c, _id, _a);
+        _id -= 1;
     }
     return _id;
 }
 
 // SIGNAL 0
-void Grid::valueChanged(int _t1, int _t2)
+void Grid::sudokuValuesChanged()
 {
-    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))) };
-    QMetaObject::activate(this, &staticMetaObject, 0, _a);
+    QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
 }
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE

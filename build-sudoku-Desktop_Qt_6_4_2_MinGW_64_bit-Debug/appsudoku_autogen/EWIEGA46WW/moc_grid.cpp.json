@@ -11,8 +11,24 @@
                             "type": "int"
                         }
                     ],
+                    "name": "select",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "id",
+                            "type": "int"
+                        }
+                    ],
                     "name": "getValue",
                     "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "name": "getSudokuValues",
+                    "returnType": "QList<int>"
                 },
                 {
                     "access": "public",
@@ -22,7 +38,7 @@
                             "type": "int"
                         },
                         {
-                            "name": "value",
+                            "name": "val",
                             "type": "int"
                         }
                     ],
@@ -31,32 +47,32 @@
                 },
                 {
                     "access": "public",
-                    "arguments": [
-                        {
-                            "name": "id",
-                            "type": "int"
-                        }
-                    ],
-                    "name": "select",
+                    "name": "loadGrid",
                     "returnType": "void"
                 }
             ],
             "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "cellValues",
+                    "notify": "sudokuValuesChanged",
+                    "read": "getSudokuValues",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QList<int>",
+                    "user": false
+                }
+            ],
             "qualifiedClassName": "Grid",
             "signals": [
                 {
                     "access": "public",
-                    "arguments": [
-                        {
-                            "name": "id",
-                            "type": "int"
-                        },
-                        {
-                            "name": "value",
-                            "type": "int"
-                        }
-                    ],
-                    "name": "valueChanged",
+                    "name": "sudokuValuesChanged",
                     "returnType": "void"
                 }
             ],

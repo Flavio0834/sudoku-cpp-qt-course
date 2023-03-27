@@ -1,82 +1,108 @@
 # ninja log v5
 2	163	7010180107638706	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/.rcc/qmlcache/appsudoku_qmlcache_loader.cpp	8d4c114ab0742498
-1365	1482	7010180120513705	appsudoku_qmltyperegistrations.cpp	c933d9e5a2d115da
-15	69	7016117495407954	sudoku/main.qml	f9c0eac4b0285424
+983	1078	7016264143375565	appsudoku_qmltyperegistrations.cpp	c933d9e5a2d115da
+11	61	7016200264707259	sudoku/main.qml	f9c0eac4b0285424
 1259	1310	7010180119142197	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/.rcc/qrc_qmake_sudoku.cpp	a9fbcac1b4cd38fc
-15	69	7016117495407954	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/sudoku/main.qml	f9c0eac4b0285424
-1365	1482	7010180120513705	sudoku/appsudoku.qmltypes	c933d9e5a2d115da
-470	558	7016117500304866	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/appsudoku_json_file_list.txt	d95220c2d3c65426
+11	61	7016200264707259	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/sudoku/main.qml	f9c0eac4b0285424
+983	1078	7016264143375565	sudoku/appsudoku.qmltypes	c933d9e5a2d115da
+448	492	7016281585056527	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/appsudoku_json_file_list.txt	d95220c2d3c65426
 1259	1310	7010180119142197	.rcc/qrc_qmake_sudoku.cpp	a9fbcac1b4cd38fc
 2	163	7010180107638706	.rcc/qmlcache/appsudoku_qmlcache_loader.cpp	8d4c114ab0742498
-22	84	7016117495557569	.qt_plugins/Qt6_QmlPlugins_Imports_appsudoku.cmake	f05bea13accb17a7
-22	84	7016117495557569	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/.qt_plugins/Qt6_QmlPlugins_Imports_appsudoku.cmake	f05bea13accb17a7
-9	452	7016117499227739	appsudoku_autogen/timestamp	f2a5f59623ad9421
-9	452	7016117499227739	appsudoku_autogen/mocs_compilation.cpp	f2a5f59623ad9421
-764	833	7016117503057499	CMakeFiles/appsudoku.dir/.rcc/qrc_appsudoku_raw_qml_0.cpp.obj	ed1bcfaed301478a
-9	452	7016117499227739	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/appsudoku_autogen/timestamp	f2a5f59623ad9421
-9	452	7016117499227739	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/appsudoku_autogen/mocs_compilation.cpp	f2a5f59623ad9421
-477	521	7016117499915908	.rcc/qrc_appsudoku_raw_qml_0.cpp	9eaef2898b5a846b
-477	521	7016117499915908	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/.rcc/qrc_appsudoku_raw_qml_0.cpp	9eaef2898b5a846b
-614	755	7016117502189820	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/.rcc/qmlcache/appsudoku_main_qml.cpp	7f0c6d3136279308
-470	558	7016117500304866	meta_types/appsudoku_json_file_list.txt	d95220c2d3c65426
-1622	3804	7010180144084654	CMakeFiles/appsudoku.dir/main.cpp.obj	441de58f22d00f45
-558	614	7016117500304866	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/qt6appsudoku_debug_metatypes.json.gen	6a12b5f545cfc552
-470	558	7016117500304866	meta_types/appsudoku_json_file_list.txt.timestamp	d95220c2d3c65426
-759	2801	7016117522735214	CMakeFiles/appsudoku.dir/.rcc/qmlcache/appsudoku_main_qml.cpp.obj	cf44fa22033fd6d
-1365	1482	7010180120513705	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/sudoku/appsudoku.qmltypes	c933d9e5a2d115da
-470	558	7016117500304866	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/appsudoku_json_file_list.txt.timestamp	d95220c2d3c65426
-558	614	7016117500304866	meta_types/qt6appsudoku_debug_metatypes.json.gen	6a12b5f545cfc552
-558	614	7016117500304866	meta_types/qt6appsudoku_debug_metatypes.json	6a12b5f545cfc552
-558	614	7016117500304866	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/qt6appsudoku_debug_metatypes.json	6a12b5f545cfc552
-1365	1482	7010180120513705	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/appsudoku_qmltyperegistrations.cpp	c933d9e5a2d115da
-614	755	7016117502189820	.rcc/qmlcache/appsudoku_main_qml.cpp	7f0c6d3136279308
+21	89	7016200264966594	.qt_plugins/Qt6_QmlPlugins_Imports_appsudoku.cmake	f05bea13accb17a7
+21	89	7016200264966594	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/.qt_plugins/Qt6_QmlPlugins_Imports_appsudoku.cmake	f05bea13accb17a7
+16	431	7016281584423033	appsudoku_autogen/timestamp	f2a5f59623ad9421
+16	431	7016281584423033	appsudoku_autogen/mocs_compilation.cpp	f2a5f59623ad9421
+304	389	7016200268014116	CMakeFiles/appsudoku.dir/.rcc/qrc_appsudoku_raw_qml_0.cpp.obj	ed1bcfaed301478a
+16	431	7016281584423033	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/appsudoku_autogen/timestamp	f2a5f59623ad9421
+16	431	7016281584423033	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/appsudoku_autogen/mocs_compilation.cpp	f2a5f59623ad9421
+89	139	7016200265470455	.rcc/qrc_appsudoku_raw_qml_0.cpp	9eaef2898b5a846b
+89	139	7016200265470455	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/.rcc/qrc_appsudoku_raw_qml_0.cpp	9eaef2898b5a846b
+1079	1189	7016264144801951	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/.rcc/qmlcache/appsudoku_main_qml.cpp	7f0c6d3136279308
+448	492	7016281585056527	meta_types/appsudoku_json_file_list.txt	d95220c2d3c65426
+1201	3508	7016264168049403	CMakeFiles/appsudoku.dir/main.cpp.obj	441de58f22d00f45
+493	542	7016281585056527	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/qt6appsudoku_debug_metatypes.json.gen	6a12b5f545cfc552
+448	492	7016281585056527	meta_types/appsudoku_json_file_list.txt.timestamp	d95220c2d3c65426
+1206	3615	7016264169131711	CMakeFiles/appsudoku.dir/.rcc/qmlcache/appsudoku_main_qml.cpp.obj	cf44fa22033fd6d
+983	1078	7016264143375565	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/sudoku/appsudoku.qmltypes	c933d9e5a2d115da
+448	492	7016281585056527	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/appsudoku_json_file_list.txt.timestamp	d95220c2d3c65426
+493	542	7016281585056527	meta_types/qt6appsudoku_debug_metatypes.json.gen	6a12b5f545cfc552
+493	542	7016281585056527	meta_types/qt6appsudoku_debug_metatypes.json	6a12b5f545cfc552
+493	542	7016281585056527	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/qt6appsudoku_debug_metatypes.json	6a12b5f545cfc552
+983	1078	7016264143375565	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/appsudoku_qmltyperegistrations.cpp	c933d9e5a2d115da
+1079	1189	7016264144801951	.rcc/qmlcache/appsudoku_main_qml.cpp	7f0c6d3136279308
 1636	1911	7010180125167077	CMakeFiles/appsudoku.dir/.rcc/qrc_qmake_sudoku.cpp.obj	73c132fb11cee46a
-1626	3260	7010180138648258	CMakeFiles/appsudoku.dir/grid.cpp.obj	ffc4144f257184b4
-1615	3339	7010180139441309	CMakeFiles/appsudoku.dir/appsudoku_autogen/mocs_compilation.cpp.obj	fd0f53d3c1472fe2
-1618	3711	7010180143161955	CMakeFiles/appsudoku.dir/appsudoku_qmltyperegistrations.cpp.obj	bd9f1d7409ee757e
+543	2243	7016281602569339	CMakeFiles/appsudoku.dir/grid.cpp.obj	ffc4144f257184b4
+1189	3362	7016264166572886	CMakeFiles/appsudoku.dir/appsudoku_autogen/mocs_compilation.cpp.obj	fd0f53d3c1472fe2
+1197	3299	7016264165974488	CMakeFiles/appsudoku.dir/appsudoku_qmltyperegistrations.cpp.obj	bd9f1d7409ee757e
 1647	4196	7010180148005439	CMakeFiles/appsudoku.dir/.rcc/qmlcache/appsudoku_qmlcache_loader.cpp.obj	42dcb1a538cfe611
-2036	2555	7016092584320648	appsudoku.exe	986ee8f0be9b28fd
-15	1131	7016118328513058	appsudoku_autogen/timestamp	f2a5f59623ad9421
-15	1131	7016118328513058	appsudoku_autogen/mocs_compilation.cpp	f2a5f59623ad9421
-15	1131	7016118328513058	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/appsudoku_autogen/timestamp	f2a5f59623ad9421
-15	1131	7016118328513058	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/appsudoku_autogen/mocs_compilation.cpp	f2a5f59623ad9421
-1132	1175	7016118332143365	meta_types/appsudoku_json_file_list.txt	d95220c2d3c65426
-1132	1175	7016118332143365	meta_types/appsudoku_json_file_list.txt.timestamp	d95220c2d3c65426
-1132	1175	7016118332143365	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/appsudoku_json_file_list.txt	d95220c2d3c65426
-1132	1175	7016118332143365	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/appsudoku_json_file_list.txt.timestamp	d95220c2d3c65426
-1176	1235	7016118332741748	meta_types/qt6appsudoku_debug_metatypes.json.gen	6a12b5f545cfc552
-1176	1235	7016118332741748	meta_types/qt6appsudoku_debug_metatypes.json	6a12b5f545cfc552
-1176	1235	7016118332741748	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/qt6appsudoku_debug_metatypes.json.gen	6a12b5f545cfc552
-1176	1235	7016118332741748	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/qt6appsudoku_debug_metatypes.json	6a12b5f545cfc552
-1236	1402	7016118333878743	appsudoku_qmltyperegistrations.cpp	c933d9e5a2d115da
-1236	1402	7016118333878743	sudoku/appsudoku.qmltypes	c933d9e5a2d115da
-1236	1402	7016118333878743	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/appsudoku_qmltyperegistrations.cpp	c933d9e5a2d115da
-1236	1402	7016118333878743	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/sudoku/appsudoku.qmltypes	c933d9e5a2d115da
-1402	1550	7016118335823554	.rcc/qmlcache/appsudoku_main_qml.cpp	7f0c6d3136279308
-1402	1550	7016118335823554	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/.rcc/qmlcache/appsudoku_main_qml.cpp	7f0c6d3136279308
-1550	3407	7016118354458891	CMakeFiles/appsudoku.dir/appsudoku_autogen/mocs_compilation.cpp.obj	fd0f53d3c1472fe2
-1559	3674	7016118357142024	CMakeFiles/appsudoku.dir/appsudoku_qmltyperegistrations.cpp.obj	bd9f1d7409ee757e
-1565	3909	7016118359475467	CMakeFiles/appsudoku.dir/.rcc/qmlcache/appsudoku_main_qml.cpp.obj	cf44fa22033fd6d
-13	934	7016119419044669	appsudoku_autogen/timestamp	f2a5f59623ad9421
-13	934	7016119419044669	appsudoku_autogen/mocs_compilation.cpp	f2a5f59623ad9421
-13	934	7016119419044669	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/appsudoku_autogen/timestamp	f2a5f59623ad9421
-13	934	7016119419044669	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/appsudoku_autogen/mocs_compilation.cpp	f2a5f59623ad9421
-934	965	7016119422435870	meta_types/appsudoku_json_file_list.txt	d95220c2d3c65426
-934	965	7016119422435870	meta_types/appsudoku_json_file_list.txt.timestamp	d95220c2d3c65426
-934	965	7016119422435870	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/appsudoku_json_file_list.txt	d95220c2d3c65426
-934	965	7016119422435870	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/appsudoku_json_file_list.txt.timestamp	d95220c2d3c65426
-965	1012	7016119422904620	meta_types/qt6appsudoku_debug_metatypes.json.gen	6a12b5f545cfc552
-965	1012	7016119422904620	meta_types/qt6appsudoku_debug_metatypes.json	6a12b5f545cfc552
-965	1012	7016119422904620	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/qt6appsudoku_debug_metatypes.json.gen	6a12b5f545cfc552
-965	1012	7016119422904620	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/qt6appsudoku_debug_metatypes.json	6a12b5f545cfc552
-1013	1115	7016119423542659	appsudoku_qmltyperegistrations.cpp	c933d9e5a2d115da
-1013	1115	7016119423542659	sudoku/appsudoku.qmltypes	c933d9e5a2d115da
-1013	1115	7016119423542659	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/appsudoku_qmltyperegistrations.cpp	c933d9e5a2d115da
-1013	1115	7016119423542659	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/sudoku/appsudoku.qmltypes	c933d9e5a2d115da
-1115	1236	7016119425058602	.rcc/qmlcache/appsudoku_main_qml.cpp	7f0c6d3136279308
-1115	1236	7016119425058602	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/.rcc/qmlcache/appsudoku_main_qml.cpp	7f0c6d3136279308
-1236	2988	7016119442671499	CMakeFiles/appsudoku.dir/appsudoku_autogen/mocs_compilation.cpp.obj	fd0f53d3c1472fe2
-1240	3046	7016119443240003	CMakeFiles/appsudoku.dir/grid.cpp.obj	ffc4144f257184b4
-1244	3273	7016119445504196	CMakeFiles/appsudoku.dir/appsudoku_qmltyperegistrations.cpp.obj	bd9f1d7409ee757e
-1248	3547	7016119448246622	CMakeFiles/appsudoku.dir/.rcc/qmlcache/appsudoku_main_qml.cpp.obj	cf44fa22033fd6d
-3547	3830	7016119451029164	appsudoku.exe	986ee8f0be9b28fd
+2244	2685	7016281606903717	appsudoku.exe	986ee8f0be9b28fd
+17	455	7016283383605444	appsudoku_autogen/timestamp	f2a5f59623ad9421
+17	455	7016283383605444	appsudoku_autogen/mocs_compilation.cpp	f2a5f59623ad9421
+17	455	7016283383605444	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/appsudoku_autogen/timestamp	f2a5f59623ad9421
+17	455	7016283383605444	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/appsudoku_autogen/mocs_compilation.cpp	f2a5f59623ad9421
+470	508	7016283384133734	meta_types/appsudoku_json_file_list.txt	d95220c2d3c65426
+470	508	7016283384133734	meta_types/appsudoku_json_file_list.txt.timestamp	d95220c2d3c65426
+470	508	7016283384133734	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/appsudoku_json_file_list.txt	d95220c2d3c65426
+470	508	7016283384133734	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/appsudoku_json_file_list.txt.timestamp	d95220c2d3c65426
+509	559	7016283384133734	meta_types/qt6appsudoku_debug_metatypes.json.gen	6a12b5f545cfc552
+509	559	7016283384133734	meta_types/qt6appsudoku_debug_metatypes.json	6a12b5f545cfc552
+509	559	7016283384133734	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/qt6appsudoku_debug_metatypes.json.gen	6a12b5f545cfc552
+509	559	7016283384133734	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/qt6appsudoku_debug_metatypes.json	6a12b5f545cfc552
+559	2344	7016283402501372	CMakeFiles/appsudoku.dir/grid.cpp.obj	ffc4144f257184b4
+2344	2721	7016283406212475	appsudoku.exe	986ee8f0be9b28fd
+7	328	7016286575390242	appsudoku_autogen/timestamp	f2a5f59623ad9421
+7	328	7016286575390242	appsudoku_autogen/mocs_compilation.cpp	f2a5f59623ad9421
+7	328	7016286575390242	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/appsudoku_autogen/timestamp	f2a5f59623ad9421
+7	328	7016286575390242	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/appsudoku_autogen/mocs_compilation.cpp	f2a5f59623ad9421
+341	376	7016286575879238	meta_types/appsudoku_json_file_list.txt	d95220c2d3c65426
+341	376	7016286575879238	meta_types/appsudoku_json_file_list.txt.timestamp	d95220c2d3c65426
+341	376	7016286575879238	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/appsudoku_json_file_list.txt	d95220c2d3c65426
+341	376	7016286575879238	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/appsudoku_json_file_list.txt.timestamp	d95220c2d3c65426
+377	420	7016286575869295	meta_types/qt6appsudoku_debug_metatypes.json.gen	6a12b5f545cfc552
+377	420	7016286575869295	meta_types/qt6appsudoku_debug_metatypes.json	6a12b5f545cfc552
+377	420	7016286575869295	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/qt6appsudoku_debug_metatypes.json.gen	6a12b5f545cfc552
+377	420	7016286575869295	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/qt6appsudoku_debug_metatypes.json	6a12b5f545cfc552
+421	1833	7016286590436499	CMakeFiles/appsudoku.dir/grid.cpp.obj	ffc4144f257184b4
+1834	2192	7016286593972421	appsudoku.exe	986ee8f0be9b28fd
+9	364	7016286856019739	appsudoku_autogen/timestamp	f2a5f59623ad9421
+9	364	7016286856019739	appsudoku_autogen/mocs_compilation.cpp	f2a5f59623ad9421
+9	364	7016286856019739	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/appsudoku_autogen/timestamp	f2a5f59623ad9421
+9	364	7016286856019739	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/appsudoku_autogen/mocs_compilation.cpp	f2a5f59623ad9421
+386	429	7016286856683120	meta_types/appsudoku_json_file_list.txt	d95220c2d3c65426
+386	429	7016286856683120	meta_types/appsudoku_json_file_list.txt.timestamp	d95220c2d3c65426
+386	429	7016286856683120	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/appsudoku_json_file_list.txt	d95220c2d3c65426
+386	429	7016286856683120	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/appsudoku_json_file_list.txt.timestamp	d95220c2d3c65426
+429	484	7016286856683120	meta_types/qt6appsudoku_debug_metatypes.json.gen	6a12b5f545cfc552
+429	484	7016286856683120	meta_types/qt6appsudoku_debug_metatypes.json	6a12b5f545cfc552
+429	484	7016286856683120	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/qt6appsudoku_debug_metatypes.json.gen	6a12b5f545cfc552
+429	484	7016286856683120	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/qt6appsudoku_debug_metatypes.json	6a12b5f545cfc552
+485	2527	7016286877667853	CMakeFiles/appsudoku.dir/grid.cpp.obj	ffc4144f257184b4
+2527	2910	7016286881450441	appsudoku.exe	986ee8f0be9b28fd
+14	423	7016287493159969	appsudoku_autogen/timestamp	f2a5f59623ad9421
+14	423	7016287493159969	appsudoku_autogen/mocs_compilation.cpp	f2a5f59623ad9421
+14	423	7016287493159969	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/appsudoku_autogen/timestamp	f2a5f59623ad9421
+14	423	7016287493159969	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/appsudoku_autogen/mocs_compilation.cpp	f2a5f59623ad9421
+445	490	7016287493833023	meta_types/appsudoku_json_file_list.txt	d95220c2d3c65426
+445	490	7016287493833023	meta_types/appsudoku_json_file_list.txt.timestamp	d95220c2d3c65426
+445	490	7016287493833023	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/appsudoku_json_file_list.txt	d95220c2d3c65426
+445	490	7016287493833023	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/appsudoku_json_file_list.txt.timestamp	d95220c2d3c65426
+491	544	7016287493833023	meta_types/qt6appsudoku_debug_metatypes.json.gen	6a12b5f545cfc552
+491	544	7016287493833023	meta_types/qt6appsudoku_debug_metatypes.json	6a12b5f545cfc552
+491	544	7016287493833023	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/qt6appsudoku_debug_metatypes.json.gen	6a12b5f545cfc552
+491	544	7016287493833023	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/qt6appsudoku_debug_metatypes.json	6a12b5f545cfc552
+545	2089	7016287509828482	CMakeFiles/appsudoku.dir/grid.cpp.obj	ffc4144f257184b4
+2090	2469	7016287513565502	appsudoku.exe	986ee8f0be9b28fd
+13	416	7016288419724380	appsudoku_autogen/timestamp	f2a5f59623ad9421
+13	416	7016288419724380	appsudoku_autogen/mocs_compilation.cpp	f2a5f59623ad9421
+13	416	7016288419724380	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/appsudoku_autogen/timestamp	f2a5f59623ad9421
+13	416	7016288419724380	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/appsudoku_autogen/mocs_compilation.cpp	f2a5f59623ad9421
+432	469	7016288420268151	meta_types/appsudoku_json_file_list.txt	d95220c2d3c65426
+432	469	7016288420268151	meta_types/appsudoku_json_file_list.txt.timestamp	d95220c2d3c65426
+432	469	7016288420268151	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/appsudoku_json_file_list.txt	d95220c2d3c65426
+432	469	7016288420268151	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/appsudoku_json_file_list.txt.timestamp	d95220c2d3c65426
+469	518	7016288420268151	meta_types/qt6appsudoku_debug_metatypes.json.gen	6a12b5f545cfc552
+469	518	7016288420268151	meta_types/qt6appsudoku_debug_metatypes.json	6a12b5f545cfc552
+469	518	7016288420268151	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/qt6appsudoku_debug_metatypes.json.gen	6a12b5f545cfc552
+469	518	7016288420268151	C:/Users/anton/OneDrive/Bureau/Cours/S8/Application en Cpp/sudoku-elca11/build-sudoku-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/meta_types/qt6appsudoku_debug_metatypes.json	6a12b5f545cfc552
+518	2003	7016288435602958	CMakeFiles/appsudoku.dir/grid.cpp.obj	ffc4144f257184b4
+2004	2381	7016288439330002	appsudoku.exe	986ee8f0be9b28fd

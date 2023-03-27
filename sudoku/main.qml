@@ -14,6 +14,7 @@ Window {
         height: 360 // set the height of the grid (9 rectangles * 40 pixels per rectangle)
 
         Repeater {
+            id : repeater
             model: 81 // 9 rows * 9 columns
             Rectangle {
                 width: 40
@@ -32,7 +33,7 @@ Window {
                 }
 
                 Text {
-                    text: ""
+                    text: grid.getValue(repeater.index) === 0 ? "" : grid.getValue(repeater.index).toString()
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
                     anchors.fill: parent

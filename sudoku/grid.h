@@ -10,9 +10,12 @@ class Grid : public QObject {
 public:
     Grid(QObject *parent = nullptr);
     Q_INVOKABLE void select(int id);
-    QList<int> getSudokuValues() const {
-            return sudokuValues;
+    Q_INVOKABLE int getValue(int id);
+    Q_INVOKABLE QList<int> getSudokuValues() const {
+        return sudokuValues;
     }
+    Q_INVOKABLE void setValue(int id,int val);
+    Q_INVOKABLE void loadGrid();
 private:
     QList<int> sudokuValues;
     int selected;
