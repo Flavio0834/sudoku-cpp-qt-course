@@ -2,17 +2,22 @@
 #define GRID_H
 
 #include <QObject>
+#include <QList>
 
 class Grid : public QObject {
     Q_OBJECT
+    Q_PROPERTY(QList<int> cellValues READ getSudokuValues NOTIFY sudokuValuesChanged)
 public:
     Grid(QObject *parent = nullptr);
-    Q_INVOKABLE int getValue(int row, int col);
-    Q_INVOKABLE void setValue(int row, int col, int value);
+    Q_INVOKABLE void select(int id);
+    QList<int> getSudokuValues() const {
+            return sudokuValues;
+    }
 private:
-    int matrix[9][9];
+    QList<int> sudokuValues;
+    int selected;
 signals:
-    void valueChanged(int row, int col, int value);
+    void sudokuValuesChanged();
 };
 
 #endif // GRID_H

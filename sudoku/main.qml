@@ -1,28 +1,43 @@
 import QtQuick
 
 Window {
-    width: 480
-    height: 640
+    width: 360
+    height: 360
     visible: true
     title: qsTr("Hello World")
 
     Grid {
-        id: grid
-        x: 40
-        y: 120
-        width: 400
-        height: 400
-        verticalItemAlignment: Grid.AlignVCenter
-        horizontalItemAlignment: Grid.AlignHCenter
-        spacing: 3
-        rows: 9
+        id: sudokuGrid
         columns: 9
+        rows: 9
+        width: 360 // set the width of the grid (9 rectangles * 40 pixels per rectangle)
+        height: 360 // set the height of the grid (9 rectangles * 40 pixels per rectangle)
 
-        Rectangle {
-            id: rectangle
-            width: 40
-            height: 40
-            color: "#ffffff"
+        Repeater {
+            model: 81 // 9 rows * 9 columns
+            Rectangle {
+                width: 40
+                height: 40
+                color: "white"
+                border.color: "black"
+                border.width: 1
+
+                MouseArea {
+                    anchors.fill: parent
+                    acceptedButtons: Qt.LeftButton
+                    hoverEnabled: true
+                    onClicked: {
+                        grid.select(index)
+                    }
+                }
+
+                Text {
+                    text: ""
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                    anchors.fill: parent
+                }
+            }
         }
     }
 }
