@@ -36,7 +36,7 @@ int Grid::getValue(int id)
 void Grid::loadGrid()
 {
     auto ss = std::ostringstream{};
-    std::string filePath = "grilles\\grille" + std::to_string(rand() % 2) + ".csv"; // ici on a 2 car on a que 2 grilles
+    std::string filePath = "..\\grilles\\grille" + std::to_string(rand() % 2) + ".csv"; // ici on a 2 car on a que 2 grilles
     std::ifstream input_file(filePath);
     if (!input_file.is_open()) {
         std::cerr << "Could not open the file - '" << filePath << "'" << std::endl;
