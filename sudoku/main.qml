@@ -28,12 +28,12 @@ Window {
                     acceptedButtons: Qt.LeftButton
                     hoverEnabled: true
                     onClicked: {
-                        grid.select(index)
+                        grid.select(index) //index value = index of the rectangle
                     }
                 }
 
                 Text {
-                    text: grid.getValue(repeater.index) === 0 ? "" : grid.getValue(repeater.index).toString()
+                    text: grid.getValue(index).toString() === "0" ? " " : grid.getValue(index).toString()
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
                     anchors.fill: parent

@@ -6,7 +6,7 @@
 
 class Grid : public QObject {
     Q_OBJECT
-    Q_PROPERTY(QList<int> cellValues READ getSudokuValues NOTIFY sudokuValuesChanged)
+    Q_PROPERTY(QList<int>sudokuValues READ getSudokuValues NOTIFY sudokuValuesChanged)
 public:
     Grid(QObject *parent = nullptr);
     Q_INVOKABLE void select(int id);

@@ -30,6 +30,7 @@ void Grid::setValue(int id,int val)
 
 int Grid::getValue(int id)
 {
+    //std::cout << id + ' ' +sudokuValues[id]  << std::endl;
     return sudokuValues[id];
 }
 
@@ -61,10 +62,10 @@ void Grid::loadGrid()
         else if (c != '|' and c!='\n') {
             sudokuValues[i] = c - '0';
             i++;
-            //std::cout << i << std::endl;
+            //std::cout << c - '0' << std::endl;
         }
     }
-
+    emit sudokuValuesChanged();
     std::cout << "chargement de la grille terminé" << std::endl;
 
 
