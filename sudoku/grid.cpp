@@ -4,6 +4,7 @@
 #include <fstream>
 #include <sstream>
 
+
 Grid::Grid(QObject *parent)
     : QObject(parent)
 {
@@ -22,9 +23,17 @@ void Grid::select(int id) {
     emit sudokuValuesChanged();
 }
 
-void Grid::setValue(int id,int val)
+void Grid::setValue(char val)
 {
-    sudokuValues[id] = val;
+
+    std::cout << "oui" << std::endl;
+    const int id = selected;
+    if (val == 's') { // suppr
+        sudokuValues[id] = 0;
+    }
+    else {
+        sudokuValues[id] = std::stoi(std::string(1,val));
+    }
     emit sudokuValuesChanged();
 }
 

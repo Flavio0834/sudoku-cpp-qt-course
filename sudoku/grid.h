@@ -14,7 +14,7 @@ public:
     Q_INVOKABLE QList<int> getSudokuValues() const {
         return sudokuValues;
     }
-    Q_INVOKABLE void setValue(int id,int val);
+    Q_INVOKABLE void setValue(char val);
     Q_INVOKABLE void loadGrid();
 private:
     QList<int> sudokuValues;
