@@ -1,4 +1,0 @@
-module sudoku
-typeinfo appsudoku.qmltypes
-prefer :/sudoku/
-
