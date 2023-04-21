@@ -17,7 +17,6 @@ Window {
         height: 360 // set the height of the grid (9 rectangles * 40 pixels per rectangle)
 
         Keys.onPressed: {
-            console.log("ok");
                 switch(event.key) {
                     case Qt.Key_Backspace:
                         grid.setValue("s");
@@ -60,7 +59,7 @@ Window {
             Rectangle {
                 width: 40
                 height: 40
-                color: "white"
+                color: grid.qml_sudokuColors[index]
                 border.color: "black"
                 border.width: 1
 
@@ -74,7 +73,7 @@ Window {
                 }
 
                 Text {
-                    text: grid.getValue(index).toString() === "0" ? " " : grid.getValue(index).toString()
+                    text: grid.qml_sudokuValues[index].toString() ==='0' ? ' ' : grid.qml_sudokuValues[index].toString()
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
                     anchors.fill: parent

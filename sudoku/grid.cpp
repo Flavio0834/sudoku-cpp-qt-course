@@ -9,6 +9,7 @@ Grid::Grid(QObject *parent)
     : QObject(parent)
 {
     sudokuValues.fill(0, 81);
+    sudokuColors.fill("white",81);
     int selected = 0;
     loadGrid();
 
@@ -16,16 +17,16 @@ Grid::Grid(QObject *parent)
 }
 
 
-
 void Grid::select(int id) {
     selected = id;
-    std::cout << id << std::endl;
-    emit sudokuValuesChanged();
+    std::cout << "case sélectionnée : " << id << std::endl;
+    //sudokuValues[id] = 9; //debug click
+    //emit sudokuValuesChanged();
+    setColor();
 }
 
 void Grid::setValue(char val)
 {
-
     std::cout << "oui" << std::endl;
     const int id = selected;
     if (val == 's') { // suppr
@@ -37,11 +38,26 @@ void Grid::setValue(char val)
     emit sudokuValuesChanged();
 }
 
-int Grid::getValue(int id)
-{
-    //std::cout << id + ' ' +sudokuValues[id]  << std::endl;
-    return sudokuValues[id];
+void Grid::setColor() {
+    const int id = selected;
+    sudokuColors.fill("white",81);
+
+    int row = (id+1)/9;
+    int column = id%9;
+    std::cout << row << ' ' << column << std::endl;
+
+    for (int i = 0 ; i < 9 ; i++){
+        sudokuColors[9*row + i] = "#C1FFC8"; //colorize the row
+        sudokuColors[i*9 + column] = "#C1FFC8"; //colorize the column
+        std::cout << 9*row + i << ' ' << i*row + column << std::endl;
+    }
+
+    sudokuColors[id] = "#77FF90";
+
+    emit sudokuColorsChanged();
 }
+
+
 
 void Grid::loadGrid()
 {
