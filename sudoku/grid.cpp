@@ -52,6 +52,18 @@ void Grid::setColor() {
         std::cout << 9*row + i << ' ' << i*row + column << std::endl;
     }
 
+    //indices of the block
+    int row_block = row/3;
+    int column_block = column/3;
+
+    //colorizing the block
+
+    for (int j = 0 ; j < 3 ; j++) {
+        sudokuColors[9*(3*row_block) + 3*column_block + j] = "#C1FFC8";
+        sudokuColors[9*(3*row_block+1) + 3*column_block + j] = "#C1FFC8";
+        sudokuColors[9*(3*row_block+2) + 3*column_block + j] = "#C1FFC8";
+    }
+
     sudokuColors[id] = "#77FF90";
 
     emit sudokuColorsChanged();
