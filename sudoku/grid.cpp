@@ -10,6 +10,7 @@ Grid::Grid(QObject *parent)
 {
     sudokuValues.fill(0, 81);
     sudokuColors.fill("white",81);
+    isSudokuValuesFixed.fill(false,81);
     int selected = 0;
     loadGrid();
 
@@ -18,11 +19,15 @@ Grid::Grid(QObject *parent)
 
 
 void Grid::select(int id) {
-    selected = id;
-    std::cout << "case sélectionnée : " << id << std::endl;
-    //sudokuValues[id] = 9; //debug click
-    //emit sudokuValuesChanged();
-    setColor();
+    if (!isSudokuValuesFixed[id]) {
+        selected = id;
+        std::cout << "case sélectionnée : " << id << std::endl;
+        //sudokuValues[id] = 9; //debug click
+        //emit sudokuValuesChanged();
+        setColor();
+
+    }
+
 }
 
 void Grid::setValue(char val)
@@ -38,30 +43,40 @@ void Grid::setValue(char val)
     emit sudokuValuesChanged();
 }
 
-void Grid::setColor() {
-    const int id = selected;
-    sudokuColors.fill("white",81);
+QList<int> Grid::getComparedCellsList(int id) {
+    QList<int> comparedCellsList;
 
     int row = (id+1)/9;
     int column = id%9;
-    std::cout << row << ' ' << column << std::endl;
-
-    for (int i = 0 ; i < 9 ; i++){
-        sudokuColors[9*row + i] = "#C1FFC8"; //colorize the row
-        sudokuColors[i*9 + column] = "#C1FFC8"; //colorize the column
-        std::cout << 9*row + i << ' ' << i*row + column << std::endl;
-    }
-
-    //indices of the block
     int row_block = row/3;
     int column_block = column/3;
 
-    //colorizing the block
+    for (int i = 0 ; i < 9 ; i++){ // adding cells of the row and collumn
+        if (((i*9 + column + 1)/9)/3 != row_block){
+            comparedCellsList.append(i*9 + column);
+        }
+        if (((9*row + i)%9)/3 != column_block) {
+            comparedCellsList.append(9*row + i);
+        }
+    }
 
-    for (int j = 0 ; j < 3 ; j++) {
-        sudokuColors[9*(3*row_block) + 3*column_block + j] = "#C1FFC8";
-        sudokuColors[9*(3*row_block+1) + 3*column_block + j] = "#C1FFC8";
-        sudokuColors[9*(3*row_block+2) + 3*column_block + j] = "#C1FFC8";
+    for (int i = 0 ; i < 3 ; i++) { //adding the 8 values of the block
+        for (int j = 0 ; j < 3 ; j++) {
+            if (9*(3*row_block+i) + 3*column_block + j != id){
+                comparedCellsList.append(9*(3*row_block+i) + 3*column_block + j);
+            }
+        }
+    }
+    return comparedCellsList;
+}
+
+void Grid::setColor() {
+    const int id = selected;
+    sudokuColors.fill("white",81);
+    QList<int> comparedCellsList = getComparedCellsList(id);
+
+    for (int i = 0 ; i < 20 ; i++) {
+        sudokuColors[comparedCellsList[i]] = "#C1FFC8";
     }
 
     sudokuColors[id] = "#77FF90";
@@ -98,6 +113,7 @@ void Grid::loadGrid()
         }
         else if (c != '|' and c!='\n') {
             sudokuValues[i] = c - '0';
+            isSudokuValuesFixed[i] = true;
             i++;
             //std::cout << c - '0' << std::endl;
         }

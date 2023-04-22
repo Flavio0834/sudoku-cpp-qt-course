@@ -77,6 +77,8 @@ Window {
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
                     anchors.fill: parent
+                    font.bold: grid.getIsSudokuValuesFixed()[index]
+
 
 
                 }
