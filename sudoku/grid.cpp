@@ -3,6 +3,8 @@
 #include <QList>
 #include <fstream>
 #include <sstream>
+#include <thread>
+#include <chrono>
 
 
 Grid::Grid(QObject *parent)
@@ -22,23 +24,37 @@ void Grid::select(int id) {
     if (!isSudokuValuesFixed[id]) {
         selected = id;
         std::cout << "case sélectionnée : " << id << std::endl;
-        //sudokuValues[id] = 9; //debug click
-        //emit sudokuValuesChanged();
         setColor();
-
+        setValue('9'); //debug click
     }
-
 }
 
 void Grid::setValue(char val)
 {
-    std::cout << "oui" << std::endl;
-    const int id = selected;
+    setColor();
+    int id = selected;
     if (val == 's') { // suppr
         sudokuValues[id] = 0;
     }
     else {
-        sudokuValues[id] = std::stoi(std::string(1,val));
+        int newValue = std::stoi(std::string(1,val));
+        QList<int> comparedCellsList = getComparedCellsList(id);
+        bool canModifyValue = true;
+        int idCellInConflict = 0;
+        for (int i = 0 ; i < 20 ; i++) {
+            if (sudokuValues[comparedCellsList[i]] == newValue) { //check if there is no conflict in modifying the value of the cell
+                canModifyValue = false;
+                idCellInConflict = comparedCellsList[i];
+                break;
+            }
+        }
+        if (canModifyValue) {
+            sudokuValues[id] = newValue;
+        }
+        else {
+            sudokuColors[idCellInConflict] = "red";
+            emit sudokuColorsChanged();
+        }
     }
     emit sudokuValuesChanged();
 }
