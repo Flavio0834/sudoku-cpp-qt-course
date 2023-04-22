@@ -25,7 +25,7 @@ void Grid::select(int id) {
         selected = id;
         std::cout << "case sélectionnée : " << id << std::endl;
         setColor();
-        setValue('9'); //debug click
+        //setValue('9'); //debug click
     }
 }
 
@@ -62,13 +62,13 @@ void Grid::setValue(char val)
 QList<int> Grid::getComparedCellsList(int id) {
     QList<int> comparedCellsList;
 
-    int row = (id+1)/9;
+    int row = (id)/9;
     int column = id%9;
     int row_block = row/3;
     int column_block = column/3;
 
     for (int i = 0 ; i < 9 ; i++){ // adding cells of the row and collumn
-        if (((i*9 + column + 1)/9)/3 != row_block){
+        if (((i*9 + column )/9)/3 != row_block){
             comparedCellsList.append(i*9 + column);
         }
         if (((9*row + i)%9)/3 != column_block) {
@@ -83,6 +83,10 @@ QList<int> Grid::getComparedCellsList(int id) {
             }
         }
     }
+    for (int i = 0 ; i < 20 ; i++){
+        std::cout << comparedCellsList[i] << ' ';
+    }
+    std::cout << std::endl;
     return comparedCellsList;
 }
 

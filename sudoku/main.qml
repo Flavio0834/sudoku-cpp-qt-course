@@ -17,41 +17,39 @@ Window {
         height: 360 // set the height of the grid (9 rectangles * 40 pixels per rectangle)
 
         Keys.onPressed: {
-                switch(event.key) {
-                    case Qt.Key_Backspace:
-                        grid.setValue("s");
-                        break;
-                    case Qt.Key_1:
-                        grid.setValue("1");
-                        break;
-                    case Qt.Key_2:
-                        grid.setValue("2");
-                        break;
-                    case Qt.Key_3:
-                        grid.setValue("3");
-                        break;
-                    case Qt.Key_4:
-                        grid.setValue("4");
-                        break;
-                    case Qt.Key_5:
-                        grid.setValue("5");
-                        break;
-                    case Qt.Key_6:
-                        grid.setValue("6");
-                        break;
-                    case Qt.Key_7:
-                        grid.setValue("7");
-                        break;
-                    case Qt.Key_8:
-                        grid.setValue("8");
-                        break;
-                    case Qt.Key_9:
-                        grid.setValue("9");
-                        break;
-                }
+            switch(event.key) {
+                case Qt.Key_Backspace:
+                    grid.setValue('s');
+                    break;
+                case Qt.Key_1:
+                    grid.setValue('1');
+                    break;
+                case Qt.Key_2:
+                    grid.setValue('2');
+                    break;
+                case Qt.Key_3:
+                    grid.setValue('3');
+                    break;
+                case Qt.Key_4:
+                    grid.setValue('4');
+                    break;
+                case Qt.Key_5:
+                    grid.setValue('5');
+                    break;
+                case Qt.Key_6:
+                    grid.setValue('6');
+                    break;
+                case Qt.Key_7:
+                    grid.setValue('7');
+                    break;
+                case Qt.Key_8:
+                    grid.setValue('8');
+                    break;
+                case Qt.Key_9:
+                    grid.setValue('9');
+                    break;
             }
-
-
+        }
 
         Repeater {
             id : repeater
@@ -68,7 +66,7 @@ Window {
                     acceptedButtons: Qt.LeftButton
                     hoverEnabled: true
                     onClicked: {
-                        grid.select(index) //index value = index of the rectangle
+                        grid.select(index); //index value = index of the rectangle
                     }
                 }
 
