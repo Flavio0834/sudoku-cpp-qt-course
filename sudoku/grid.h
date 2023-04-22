@@ -20,7 +20,7 @@ public:
     Q_INVOKABLE QList<bool> getIsSudokuValuesFixed() const {
         return isSudokuValuesFixed;
     }
-    Q_INVOKABLE void setValue(char val);
+    Q_INVOKABLE void setValue(int val);
     Q_INVOKABLE void setColor();
     Q_INVOKABLE void loadGrid();
     Q_INVOKABLE QList<int> getComparedCellsList(int id);

@@ -23,36 +23,37 @@ Grid::Grid(QObject *parent)
 void Grid::select(int id) {
     if (!isSudokuValuesFixed[id]) {
         selected = id;
-        std::cout << "case sélectionnée : " << id << std::endl;
+        //std::cout << "case sélectionnée : " << id << std::endl;
         setColor();
-        //setValue('9'); //debug click
+        //setValue(1); //debug click
     }
 }
 
-void Grid::setValue(char val)
+void Grid::setValue(int val)
 {
     setColor();
     int id = selected;
-    if (val == 's') { // suppr
+    if (val == 0) { // suppr
         sudokuValues[id] = 0;
+        std::cout << "suppr" << std::endl;
     }
     else {
-        int newValue = std::stoi(std::string(1,val));
         QList<int> comparedCellsList = getComparedCellsList(id);
         bool canModifyValue = true;
-        int idCellInConflict = 0;
+        QList<int> idCellInConflict;
         for (int i = 0 ; i < 20 ; i++) {
-            if (sudokuValues[comparedCellsList[i]] == newValue) { //check if there is no conflict in modifying the value of the cell
+            if (sudokuValues[comparedCellsList[i]] == val) { //check if there is no conflict in modifying the value of the cell
                 canModifyValue = false;
-                idCellInConflict = comparedCellsList[i];
-                break;
+                idCellInConflict.append(comparedCellsList[i]);
             }
         }
         if (canModifyValue) {
-            sudokuValues[id] = newValue;
+            sudokuValues[id] = val;
         }
         else {
-            sudokuColors[idCellInConflict] = "red";
+            for (int i = 0 ; i < idCellInConflict.length() ; i++){
+                sudokuColors[idCellInConflict[i]] = "red";
+            }
             emit sudokuColorsChanged();
         }
     }
@@ -83,10 +84,10 @@ QList<int> Grid::getComparedCellsList(int id) {
             }
         }
     }
-    for (int i = 0 ; i < 20 ; i++){
-        std::cout << comparedCellsList[i] << ' ';
-    }
-    std::cout << std::endl;
+    //for (int i = 0 ; i < 20 ; i++){
+    //    std::cout << comparedCellsList[i] << ' ';
+    //}
+    //std::cout << std::endl;
     return comparedCellsList;
 }
 
