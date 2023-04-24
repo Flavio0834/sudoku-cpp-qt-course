@@ -13,19 +13,17 @@ Grid::Grid(QObject *parent)
     sudokuValues.fill(0, 81);
     sudokuColors.fill("white",81);
     int selected = 0;
-    int difficulty = 0;
-    loadGrid();
+    int difficulty = 0; // Default = Beginner
+    loadGrid(); // Start a game
 
 
 }
 
 
 void Grid::select(int id) {
-    if (!isSudokuValueFixed[id]) {
+    if (!isSudokuValueFixed[id]) { // If the value of the cell is predefined, the player can't access it
         selected = id;
-        //std::cout << "case sélectionnée : " << id << std::endl;
         setColor();
-        //setValue(1); //debug click
     }
 }
 
@@ -33,16 +31,15 @@ void Grid::setValue(int val)
 {
     setColor();
     int id = selected;
-    if (val == 0) { // suppr
+    if (val == 0) { // Emptying the cell
         sudokuValues[id] = 0;
-        std::cout << "suppr" << std::endl;
     }
     else {
         QList<int> comparedCellsList = getComparedCellsList(id);
         bool canModifyValue = true;
         QList<int> idCellInConflict;
         for (int i = 0 ; i < 20 ; i++) {
-            if (sudokuValues[comparedCellsList[i]] == val) { //check if there is no conflict in modifying the value of the cell
+            if (sudokuValues[comparedCellsList[i]] == val) { // Check if there is no conflict in modifying the value of the cell
                 canModifyValue = false;
                 idCellInConflict.append(comparedCellsList[i]);
             }
@@ -68,7 +65,7 @@ QList<int> Grid::getComparedCellsList(int id) {
     int row_block = row/3;
     int column_block = column/3;
 
-    for (int i = 0 ; i < 9 ; i++){ // adding cells of the row and collumn
+    for (int i = 0 ; i < 9 ; i++){ // Adding cells of the row and collumn
         if (((i*9 + column )/9)/3 != row_block){
             comparedCellsList.append(i*9 + column);
         }
@@ -77,17 +74,13 @@ QList<int> Grid::getComparedCellsList(int id) {
         }
     }
 
-    for (int i = 0 ; i < 3 ; i++) { //adding the 8 values of the block
+    for (int i = 0 ; i < 3 ; i++) { // Adding the 8 values of the block
         for (int j = 0 ; j < 3 ; j++) {
             if (9*(3*row_block+i) + 3*column_block + j != id){
                 comparedCellsList.append(9*(3*row_block+i) + 3*column_block + j);
             }
         }
     }
-    //for (int i = 0 ; i < 20 ; i++){
-    //    std::cout << comparedCellsList[i] << ' ';
-    //}
-    //std::cout << std::endl;
     return comparedCellsList;
 }
 
@@ -105,12 +98,11 @@ void Grid::setColor() {
     emit sudokuColorsChanged();
 }
 
-
-
 void Grid::loadGrid()
 {
+    // File reading
     auto ss = std::ostringstream{};
-    std::string filePath = "..\\grilles\\grille" + std::to_string(difficulty) + ".csv"; // ici on a 2 car on a que 2 grilles
+    std::string filePath = "..\\grilles\\grille" + std::to_string(difficulty) + ".csv";
     std::ifstream input_file(filePath);
     if (!input_file.is_open()) {
         std::cerr << "Could not open the file - '" << filePath << "'" << std::endl;
@@ -118,17 +110,16 @@ void Grid::loadGrid()
     }
     ss << input_file.rdbuf();
     std::string file_contents = ss.str();
-    //std::cout << file_contents;
 
+    // Creating the grid
     int i = 0;
 
-    isSudokuValueFixed.fill(false,81);
+    isSudokuValueFixed.fill(false,81); // Reset bold and unaccessable cells values
 
     for (char c : file_contents) {
         if (c == '.') {
             sudokuValues[i] = 0;
             i++;
-            //std::cout << i << std::endl;
         }
         else if (i == 81)
             {
@@ -138,12 +129,10 @@ void Grid::loadGrid()
             sudokuValues[i] = c - '0';
             isSudokuValueFixed[i] = true;
             i++;
-            //std::cout << c - '0' << std::endl;
         }
     }
     emit sudokuValuesChanged();
-    emit sudokuGridChanged();
-    //std::cout << "chargement de la grille terminé" << std::endl;
+    emit sudokuGridChanged(); // Reset bold and unaccessable cells QML side
 }
 
 void Grid::changeDifficulty() {
@@ -153,5 +142,5 @@ void Grid::changeDifficulty() {
     else {
         difficulty = 0;
     }
-    emit sudokuDifficultyChanged();
+    emit sudokuDifficultyChanged(); // Updates the text in the button, doesn't change the difficulty unless a new game is started
 }

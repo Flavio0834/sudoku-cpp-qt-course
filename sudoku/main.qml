@@ -8,15 +8,14 @@ Window {
     visible: true
     title: qsTr("Hello World")
 
-
     Grid {
         id: sudokuGrid
         x: 0
         y: 26
         columns: 9
         rows: 9
-        width: 360 // set the width of the grid (9 rectangles * 40 pixels per rectangle)
-        height: 360 // set the height of the grid (9 rectangles * 40 pixels per rectangle)
+        width: 360 // Set the width of the grid (9 rectangles * 40 pixels per rectangle)
+        height: 360 // Set the height of the grid (9 rectangles * 40 pixels per rectangle)
         focus : true
         Keys.onPressed: {
             switch(event.key) {
@@ -98,7 +97,7 @@ Window {
                     acceptedButtons: Qt.LeftButton
                     hoverEnabled: true
                     onClicked: {
-                        grid.select(index); //index value = index of the rectangle
+                        grid.select(index); // Index value = index of the rectangle
                     }
                 }
 
