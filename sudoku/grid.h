@@ -13,6 +13,7 @@ class Grid : public QObject {
     Q_PROPERTY(QList<bool> qml_isSudokuValueFixed READ getIsSudokuValueFixed NOTIFY sudokuGridChanged)
 public:
     Grid(QObject *parent = nullptr); // Null by default
+    ~Grid();
     Q_INVOKABLE void select(int id);
     Q_INVOKABLE QList<int> getSudokuValues() const {
         return sudokuValues;
@@ -24,7 +25,7 @@ public:
         return isSudokuValueFixed;
     }
     Q_INVOKABLE int getDifficulty() const {
-        return difficulty;
+        return *difficulty;
     }
     Q_INVOKABLE void setValue(int val);
     Q_INVOKABLE void setColor();
@@ -35,8 +36,8 @@ private: // All attributes are private for encapsulation
     QList<int> sudokuValues;
     QList<bool> isSudokuValueFixed;
     QList<QString> sudokuColors;
-    int selected;
-    int difficulty;
+    int *selected;
+    int *difficulty;
 signals: // Allows QML to update when emitted thanks to QProperties
     void sudokuValuesChanged();
     void sudokuColorsChanged();

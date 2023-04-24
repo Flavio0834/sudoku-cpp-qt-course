@@ -12,17 +12,26 @@ Grid::Grid(QObject *parent)
 {
     sudokuValues.fill(0, 81);
     sudokuColors.fill("white",81);
-    int selected = 0;
-    int difficulty = 0; // Default = Beginner
+
+    selected = new int;
+    difficulty = new int;
+    *selected = 0;
+    *difficulty = 0; // Default = Beginner
+
     loadGrid(); // Start a game
-
-
 }
+
+/*Grid::~Grid() {
+    delete selected;
+    delete difficulty;
+    selected = 0;
+    difficulty = 0;
+}*/
 
 
 void Grid::select(int id) {
     if (!isSudokuValueFixed[id]) { // If the value of the cell is predefined, the player can't access it
-        selected = id;
+        *selected = id;
         setColor();
     }
 }
@@ -30,7 +39,7 @@ void Grid::select(int id) {
 void Grid::setValue(int val)
 {
     setColor();
-    int id = selected;
+    int id = *selected;
     if (val == 0) { // Emptying the cell
         sudokuValues[id] = 0;
     }
@@ -85,7 +94,7 @@ QList<int> Grid::getComparedCellsList(int id) {
 }
 
 void Grid::setColor() {
-    const int id = selected;
+    const int id = *selected;
     sudokuColors.fill("white",81);
     QList<int> comparedCellsList = getComparedCellsList(id);
 
@@ -102,7 +111,7 @@ void Grid::loadGrid()
 {
     // File reading
     auto ss = std::ostringstream{};
-    std::string filePath = "..\\grilles\\grille" + std::to_string(difficulty) + ".csv";
+    std::string filePath = "..\\grilles\\grille" + std::to_string(*difficulty) + ".csv";
     std::ifstream input_file(filePath);
     if (!input_file.is_open()) {
         std::cerr << "Could not open the file - '" << filePath << "'" << std::endl;
@@ -136,11 +145,11 @@ void Grid::loadGrid()
 }
 
 void Grid::changeDifficulty() {
-    if (difficulty < 3) {
-        difficulty++;
+    if (*difficulty < 3) {
+        *difficulty += 1;
     }
     else {
-        difficulty = 0;
+        *difficulty = 0;
     }
     emit sudokuDifficultyChanged(); // Updates the text in the button, doesn't change the difficulty unless a new game is started
 }
