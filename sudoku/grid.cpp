@@ -12,8 +12,8 @@ Grid::Grid(QObject *parent)
 {
     sudokuValues.fill(0, 81);
     sudokuColors.fill("white",81);
-    isSudokuValuesFixed.fill(false,81);
     int selected = 0;
+    int difficulty = 0;
     loadGrid();
 
 
@@ -21,7 +21,7 @@ Grid::Grid(QObject *parent)
 
 
 void Grid::select(int id) {
-    if (!isSudokuValuesFixed[id]) {
+    if (!isSudokuValueFixed[id]) {
         selected = id;
         //std::cout << "case sélectionnée : " << id << std::endl;
         setColor();
@@ -110,7 +110,7 @@ void Grid::setColor() {
 void Grid::loadGrid()
 {
     auto ss = std::ostringstream{};
-    std::string filePath = "..\\grilles\\grille" + std::to_string(rand() % 2) + ".csv"; // ici on a 2 car on a que 2 grilles
+    std::string filePath = "..\\grilles\\grille" + std::to_string(difficulty) + ".csv"; // ici on a 2 car on a que 2 grilles
     std::ifstream input_file(filePath);
     if (!input_file.is_open()) {
         std::cerr << "Could not open the file - '" << filePath << "'" << std::endl;
@@ -121,6 +121,8 @@ void Grid::loadGrid()
     //std::cout << file_contents;
 
     int i = 0;
+
+    isSudokuValueFixed.fill(false,81);
 
     for (char c : file_contents) {
         if (c == '.') {
@@ -134,14 +136,22 @@ void Grid::loadGrid()
         }
         else if (c != '|' and c!='\n') {
             sudokuValues[i] = c - '0';
-            isSudokuValuesFixed[i] = true;
+            isSudokuValueFixed[i] = true;
             i++;
             //std::cout << c - '0' << std::endl;
         }
     }
     emit sudokuValuesChanged();
-    std::cout << "chargement de la grille terminé" << std::endl;
+    emit sudokuGridChanged();
+    //std::cout << "chargement de la grille terminé" << std::endl;
+}
 
-
-
+void Grid::changeDifficulty() {
+    if (difficulty < 3) {
+        difficulty++;
+    }
+    else {
+        difficulty = 0;
+    }
+    emit sudokuDifficultyChanged();
 }

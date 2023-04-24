@@ -2,8 +2,6 @@ import QtQuick 2.15
 import QtQuick.Window 2.15
 import QtQuick.Controls 6.3
 
-
-
 Window {
     width: 360
     height: 386
@@ -109,7 +107,7 @@ Window {
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
                     anchors.fill: parent
-                    font.bold: grid.getIsSudokuValuesFixed()[index]
+                    font.bold: grid.qml_isSudokuValueFixed[index]
                 }
 
 
@@ -125,9 +123,9 @@ Window {
 
         Rectangle {
             id: rectangle
-            x: 90
+            x: 1
             y: 3
-            width: 180
+            width: 178
             height: 20
             color: "#ffffff"
             radius: 10
@@ -137,13 +135,41 @@ Window {
                 id: mouseArea
                 anchors.fill: parent
                 onClicked: {
-                    grid.loadGrid(); //index value = index of the rectangle
+                    grid.loadGrid();
                 }
             }
 
             Text {
                 id: text1
                 text: qsTr("Relancer une partie")
+                anchors.fill: parent
+                font.pixelSize: 12
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+            }
+        }
+
+        Rectangle {
+            id: rectangle2
+            x: 181
+            y: 3
+            width: 178
+            height: 20
+            color: "#ffffff"
+            radius: 10
+            border.width: 2
+
+            MouseArea {
+                id: mouseArea1
+                anchors.fill: parent
+                onClicked: {
+                    grid.changeDifficulty();
+                }
+            }
+
+            Text {
+                id: text2
+                text: grid.qml_difficulty === 0 ? "Débutant" : grid.qml_difficulty === 1 ? "Facile" : grid.qml_difficulty === 2 ? "Moyen" : "Difficile"
                 anchors.fill: parent
                 font.pixelSize: 12
                 horizontalAlignment: Text.AlignHCenter

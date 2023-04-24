@@ -8,6 +8,8 @@ class Grid : public QObject {
     Q_OBJECT
     Q_PROPERTY(QList<int> qml_sudokuValues READ getSudokuValues NOTIFY sudokuValuesChanged)
     Q_PROPERTY(QList<QString> qml_sudokuColors READ getSudokuColors NOTIFY sudokuColorsChanged)
+    Q_PROPERTY(int qml_difficulty READ getDifficulty NOTIFY sudokuDifficultyChanged)
+    Q_PROPERTY(QList<bool> qml_isSudokuValueFixed READ getIsSudokuValueFixed NOTIFY sudokuGridChanged)
 public:
     Grid(QObject *parent = nullptr);
     Q_INVOKABLE void select(int id);
@@ -17,21 +19,28 @@ public:
     Q_INVOKABLE QList<QString> getSudokuColors() const {
         return sudokuColors;
     }
-    Q_INVOKABLE QList<bool> getIsSudokuValuesFixed() const {
-        return isSudokuValuesFixed;
+    Q_INVOKABLE QList<bool> getIsSudokuValueFixed() const {
+        return isSudokuValueFixed;
+    }
+    Q_INVOKABLE int getDifficulty() const {
+        return difficulty;
     }
     Q_INVOKABLE void setValue(int val);
     Q_INVOKABLE void setColor();
     Q_INVOKABLE void loadGrid();
     Q_INVOKABLE QList<int> getComparedCellsList(int id);
+    Q_INVOKABLE void changeDifficulty();
 private:
     QList<int> sudokuValues;
-    QList<bool> isSudokuValuesFixed;
+    QList<bool> isSudokuValueFixed;
     QList<QString> sudokuColors;
     int selected;
+    int difficulty;
 signals:
     void sudokuValuesChanged();
     void sudokuColorsChanged();
+    void sudokuDifficultyChanged();
+    void sudokuGridChanged();
 };
 
 #endif // GRID_H
