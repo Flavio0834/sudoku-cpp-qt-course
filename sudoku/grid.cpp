@@ -21,12 +21,12 @@ Grid::Grid(QObject *parent)
     loadGrid(); // Start a game
 }
 
-/*Grid::~Grid() {
+Grid::~Grid() {
     delete selected;
     delete difficulty;
     selected = 0;
     difficulty = 0;
-}*/
+}
 
 
 void Grid::select(int id) {
@@ -142,6 +142,22 @@ void Grid::loadGrid()
     }
     emit sudokuValuesChanged();
     emit sudokuGridChanged(); // Reset bold and unaccessable cells QML side
+}
+
+Q_INVOKABLE QList<int> Grid::getSudokuValues() const {
+    return sudokuValues;
+}
+
+Q_INVOKABLE QList<QString> Grid::getSudokuColors() const {
+    return sudokuColors;
+}
+
+Q_INVOKABLE QList<bool> Grid::getIsSudokuValueFixed() const {
+    return isSudokuValueFixed;
+}
+
+Q_INVOKABLE int Grid::getDifficulty() const {
+    return *difficulty;
 }
 
 void Grid::changeDifficulty() {

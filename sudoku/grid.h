@@ -15,18 +15,10 @@ public:
     Grid(QObject *parent = nullptr); // Null by default
     ~Grid();
     Q_INVOKABLE void select(int id);
-    Q_INVOKABLE QList<int> getSudokuValues() const {
-        return sudokuValues;
-    }
-    Q_INVOKABLE QList<QString> getSudokuColors() const {
-        return sudokuColors;
-    }
-    Q_INVOKABLE QList<bool> getIsSudokuValueFixed() const {
-        return isSudokuValueFixed;
-    }
-    Q_INVOKABLE int getDifficulty() const {
-        return *difficulty;
-    }
+    Q_INVOKABLE QList<int> getSudokuValues() const;
+    Q_INVOKABLE QList<QString> getSudokuColors() const;
+    Q_INVOKABLE QList<bool> getIsSudokuValueFixed() const;
+    Q_INVOKABLE int getDifficulty() const;
     Q_INVOKABLE void setValue(int val);
     Q_INVOKABLE void setColor();
     Q_INVOKABLE void loadGrid();

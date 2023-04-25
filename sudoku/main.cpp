@@ -19,5 +19,7 @@ int main(int argc, char *argv[])
     engine.rootContext()->setContextProperty("grid", &grid);
     engine.load(url);
 
+    QObject::connect(&app, &QGuiApplication::aboutToQuit, &grid, &Grid::deleteLater);
+
     return app.exec();
 }
