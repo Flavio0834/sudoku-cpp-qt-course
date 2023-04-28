@@ -47,10 +47,15 @@ void Grid::setValue(int val)
         QList<int> comparedCellsList = getComparedCellsList(id);
         bool canModifyValue = true;
         QList<int> idCellInConflict;
-        for (int i = 0 ; i < 20 ; i++) {
-            if (sudokuValues[comparedCellsList[i]] == val) { // Check if there is no conflict in modifying the value of the cell
-                canModifyValue = false;
-                idCellInConflict.append(comparedCellsList[i]);
+        if (isSudokuValueFixed[id]) {
+            canModifyValue = false;
+        }
+        else {
+            for (int i = 0 ; i < 20 ; i++) {
+                if (sudokuValues[comparedCellsList[i]] == val) { // Check if there is no conflict in modifying the value of the cell
+                    canModifyValue = false;
+                    idCellInConflict.append(comparedCellsList[i]);
+                }
             }
         }
         if (canModifyValue) {
@@ -154,7 +159,13 @@ void Grid::loadGrid()
             i++;
         }
     }
+
+    if (selected) {
+        *selected=NULL;
+        sudokuColors.fill("white",81);
+    }
     emit sudokuValuesChanged();
+    emit sudokuColorsChanged();
     emit sudokuGridChanged(); // Reset bold and unaccessable cells QML side
 }
 
