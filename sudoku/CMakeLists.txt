@@ -7,6 +7,7 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt6 6.2 COMPONENTS Quick REQUIRED)
+find_package(Qt6 REQUIRED COMPONENTS Widgets)
 
 qt_add_executable(appsudoku
     main.cpp
@@ -29,7 +30,7 @@ set_target_properties(appsudoku PROPERTIES
 )
 
 target_link_libraries(appsudoku
-    PRIVATE Qt6::Quick)
+    PRIVATE Qt6::Quick Qt6::Widgets)
 
 install(TARGETS appsudoku
     BUNDLE DESTINATION .
