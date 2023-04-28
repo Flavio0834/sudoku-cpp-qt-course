@@ -64,6 +64,15 @@ void Grid::setValue(int val)
         }
     }
     emit sudokuValuesChanged();
+
+    if (hasWon()) {
+        setFinalColors();
+        loadGrid();
+    }
+}
+
+bool Grid::hasWon() {
+    return !sudokuValues.count(0);
 }
 
 QList<int> Grid::getComparedCellsList(int id) {
@@ -104,6 +113,11 @@ void Grid::setColor() {
 
     sudokuColors[id] = "#77FF90";
 
+    emit sudokuColorsChanged();
+}
+
+void Grid::setFinalColors() {
+    sudokuColors.fill("#C1FFC8",81);
     emit sudokuColorsChanged();
 }
 
