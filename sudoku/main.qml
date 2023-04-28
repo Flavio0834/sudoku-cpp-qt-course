@@ -4,9 +4,10 @@ import QtQuick.Controls 6.3
 
 Window {
     width: 360
-    height: 412
+    height: 442
     visible: true
     title: qsTr("Hello World")
+    color: grid.qml_theme === 0 ? "#ffffff" : grid.qml_theme === 1 ? "#AAB7B8" : grid.qml_theme === 2 ? "#5D6D7E" : "#5DADE2"
 
     Grid {
         id: sudokuGrid
@@ -86,9 +87,10 @@ Window {
             model: 81 // 9 rows * 9 columns
 
             Rectangle {
+                id: rectangle6
                 width: 40
                 height: 40
-                color: grid.qml_sudokuColors[index]
+                color: grid.qml_theme === 0 ? "#ffffff" : grid.qml_theme === 1 ? "#AAB7B8" : grid.qml_theme === 2 ? "#5D6D7E" : "#5DADE2"
                 border.color: "black"
                 border.width: 1
 
@@ -118,7 +120,7 @@ Window {
         id: rectangle1
         width: 360
         height: 52
-        color: "#ffffff"
+        color: grid.qml_theme === 0 ? "#ffffff" : grid.qml_theme === 1 ? "#AAB7B8" : grid.qml_theme === 2 ? "#5D6D7E" : "#5DADE2"
 
         Rectangle {
             id: rectangle
@@ -126,7 +128,7 @@ Window {
             y: 3
             width: 178
             height: 20
-            color: "#ffffff"
+            color: grid.qml_theme === 0 ? "#ffffff" : grid.qml_theme === 1 ? "#AAB7B8" : grid.qml_theme === 2 ? "#5D6D7E" : "#5DADE2"
             radius: 10
             border.width: 2
 
@@ -154,7 +156,7 @@ Window {
             y: 3
             width: 178
             height: 20
-            color: "#ffffff"
+            color: grid.qml_theme === 0 ? "#ffffff" : grid.qml_theme === 1 ? "#AAB7B8" : grid.qml_theme === 2 ? "#5D6D7E" : "#5DADE2"
             radius: 10
             border.width: 2
 
@@ -182,7 +184,7 @@ Window {
             y: 29
             width: 178
             height: 20
-            color: "#ffffff"
+            color: grid.qml_theme === 0 ? "#ffffff" : grid.qml_theme === 1 ? "#AAB7B8" : grid.qml_theme === 2 ? "#5D6D7E" : "#5DADE2"
             radius: 10
             border.width: 2
             MouseArea {
@@ -209,15 +211,15 @@ Window {
             y: 29
             width: 178
             height: 20
-            color: "#ffffff"
+            color: grid.qml_theme === 0 ? "#ffffff" : grid.qml_theme === 1 ? "#AAB7B8" : grid.qml_theme === 2 ? "#5D6D7E" : "#5DADE2"
             radius: 10
             border.width: 2
             MouseArea {
                 id: mouseArea3
                 anchors.fill: parent
                 onClicked: {
-                            grid.loadSavedGrid();
-                        }
+                    grid.loadSavedGrid();
+                }
             }
 
             Text {
@@ -228,6 +230,33 @@ Window {
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
             }
+        }
+    }
+
+    Rectangle {
+        id: rectangle5
+        x: 91
+        y: 417
+        width: 178
+        height: 20
+        color: grid.qml_theme === 0 ? "#ffffff" : grid.qml_theme === 1 ? "#AAB7B8" : grid.qml_theme === 2 ? "#5D6D7E" : "#5DADE2"
+        radius: 10
+        border.width: 2
+        MouseArea {
+            id: mouseArea4
+            anchors.fill: parent
+            onClicked: {
+                grid.changeTheme();
+            }
+        }
+
+        Text {
+            id: text5
+            text: qsTr("Thème")
+            anchors.fill: parent
+            font.pixelSize: 12
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
         }
     }
 }

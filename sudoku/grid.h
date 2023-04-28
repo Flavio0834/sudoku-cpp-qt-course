@@ -11,6 +11,7 @@ class Grid : public QObject {
     Q_PROPERTY(QList<QString> qml_sudokuColors READ getSudokuColors NOTIFY sudokuColorsChanged)
     Q_PROPERTY(int qml_difficulty READ getDifficulty NOTIFY sudokuDifficultyChanged)
     Q_PROPERTY(QList<bool> qml_isSudokuValueFixed READ getIsSudokuValueFixed NOTIFY sudokuGridChanged)
+    Q_PROPERTY(int qml_theme READ getTheme NOTIFY sudokuThemeChanged)
 public:
     Grid(QObject *parent = nullptr); // Null by default
     ~Grid();
@@ -19,11 +20,13 @@ public:
     Q_INVOKABLE QList<QString> getSudokuColors() const;
     Q_INVOKABLE QList<bool> getIsSudokuValueFixed() const;
     Q_INVOKABLE int getDifficulty() const;
+    Q_INVOKABLE int getTheme() const;
     Q_INVOKABLE void setValue(int val);
     Q_INVOKABLE void setColor();
     Q_INVOKABLE void loadGrid();
     Q_INVOKABLE QList<int> getComparedCellsList(int id);
     Q_INVOKABLE void changeDifficulty();
+    Q_INVOKABLE void changeTheme();
     Q_INVOKABLE bool hasWon();
     Q_INVOKABLE void setFinalColors();
     Q_INVOKABLE void saveGrid();
@@ -35,11 +38,13 @@ private: // All attributes are private for encapsulation
     QList<QString> sudokuColors;
     int *selected;
     int *difficulty;
+    int *theme;
 signals: // Allows QML to update when emitted thanks to QProperties
     void sudokuValuesChanged();
     void sudokuColorsChanged();
     void sudokuDifficultyChanged();
     void sudokuGridChanged();
+    void sudokuThemeChanged();
 };
 
 #endif // GRID_H

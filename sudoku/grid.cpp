@@ -15,8 +15,10 @@ Grid::Grid(QObject *parent)
 
     selected = new int;
     difficulty = new int;
+    theme = new int;
     *selected = 0;
     *difficulty = 0; // Default = Beginner
+    *theme = 0;
 
     loadGrid(); // Start a game
 }
@@ -25,8 +27,10 @@ Grid::~Grid()
 {
     delete selected;
     delete difficulty;
+    delete theme;
     selected = 0;
     difficulty = 0;
+    theme = 0;
 }
 
 void Grid::select(int id)
@@ -217,6 +221,11 @@ Q_INVOKABLE int Grid::getDifficulty() const
     return *difficulty;
 }
 
+Q_INVOKABLE int Grid::getTheme() const
+{
+    return *theme;
+}
+
 void Grid::changeDifficulty()
 {
     if (*difficulty < 3)
@@ -228,6 +237,19 @@ void Grid::changeDifficulty()
         *difficulty = 0;
     }
     emit sudokuDifficultyChanged(); // Updates the text in the button, doesn't change the difficulty unless a new game is started
+}
+
+void Grid::changeTheme()
+{
+    if (*theme < 3)
+    {
+        *theme += 1;
+    }
+    else
+    {
+        *theme = 0;
+    }
+    emit sudokuThemeChanged(); // Updates the text in the button, doesn't change the difficulty unless a new game is started
 }
 
 void Grid::saveGrid()
