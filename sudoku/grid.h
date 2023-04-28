@@ -4,7 +4,8 @@
 #include <QObject>
 #include <QList>
 
-class Grid : public QObject {
+class Grid : public QObject
+{
     Q_OBJECT
     // QProperties allows qml to automatically update values when a signal is emitted
     Q_PROPERTY(QList<int> qml_sudokuValues READ getSudokuValues NOTIFY sudokuValuesChanged)
@@ -32,6 +33,7 @@ public:
     Q_INVOKABLE void saveGrid();
     Q_INVOKABLE void loadSavedGrid();
     std::string getCurrentDateTimeString();
+
 private: // All attributes are private for encapsulation
     QList<int> sudokuValues;
     QList<bool> isSudokuValueFixed;

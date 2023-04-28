@@ -304,11 +304,12 @@ void Grid::loadSavedGrid()
 {
     // File reading
     auto ss = std::ostringstream{};
-    //std::string filePath = "..\\grilles\\grille_saved.csv";
+    // std::string filePath = "..\\grilles\\grille_saved.csv";
 
     QString qFilePath = QFileDialog::getOpenFileName(nullptr, "Sélectionnez un fichier", "..\\grilles", "Fichiers CSV (*.csv)");
 
-    if (qFilePath.isNull()) {
+    if (qFilePath.isNull())
+    {
         return;
     }
 
