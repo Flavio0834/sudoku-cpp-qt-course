@@ -189,7 +189,7 @@ Window {
                 id: mouseArea2
                 anchors.fill: parent
                 onClicked: {
-                    grid.loadGrid();
+                    grid.saveGrid();
                 }
             }
 

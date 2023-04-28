@@ -194,3 +194,38 @@ void Grid::changeDifficulty() {
     }
     emit sudokuDifficultyChanged(); // Updates the text in the button, doesn't change the difficulty unless a new game is started
 }
+
+void Grid::saveGrid() {
+    std::string filePath = "..\\grilles\\grille_saved.csv";
+
+    std::ofstream output_file(filePath);
+
+    if (!output_file.is_open()) {
+        std::cerr << "Could not open the file - '" << filePath << "'" << std::endl;
+        exit(EXIT_FAILURE);
+    }
+
+    // Writing the grid values
+    for (int i = 0; i < 81; ++i) {
+        if (sudokuValues[i]) {
+            output_file << sudokuValues[i];
+        }
+        else {
+            output_file << '.';
+        }
+
+        if ((i + 1) % 9 == 0) {
+            output_file << std::endl;
+        } else {
+            output_file << "|";
+        }
+    }
+
+    // Writing the fixed cell values
+    for (int i = 0; i < 81; ++i) {
+        output_file << isSudokuValueFixed[i];
+        if (i != 80) {
+            output_file << ',';
+        }
+    }
+}

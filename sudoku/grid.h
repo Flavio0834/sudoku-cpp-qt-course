@@ -26,6 +26,7 @@ public:
     Q_INVOKABLE void changeDifficulty();
     Q_INVOKABLE bool hasWon();
     Q_INVOKABLE void setFinalColors();
+    Q_INVOKABLE void saveGrid();
 private: // All attributes are private for encapsulation
     QList<int> sudokuValues;
     QList<bool> isSudokuValueFixed;
