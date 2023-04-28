@@ -216,7 +216,7 @@ Window {
                 id: mouseArea3
                 anchors.fill: parent
                 onClicked: {
-                            grid.loadGrid();
+                            grid.loadSavedGrid();
                         }
             }
 

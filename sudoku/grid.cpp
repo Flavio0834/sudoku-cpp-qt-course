@@ -229,3 +229,48 @@ void Grid::saveGrid() {
         }
     }
 }
+
+void Grid::loadSavedGrid() {
+    // File reading
+    auto ss = std::ostringstream{};
+    std::string filePath = "..\\grilles\\grille_saved.csv";
+    std::ifstream input_file(filePath);
+    if (!input_file.is_open()) {
+        std::cerr << "Could not open the file - '" << filePath << "'" << std::endl;
+        exit(EXIT_FAILURE);
+    }
+    ss << input_file.rdbuf();
+    std::string file_contents = ss.str();
+
+    // Parsing the file contents
+    int i = 0;
+    for (char c : file_contents) {
+        if (i < 81) {
+            if (c == '.') {
+                sudokuValues[i] = 0;
+                i++;
+            }
+            else if (c != '|' and c!='\n') {
+                sudokuValues[i] = c - '0';
+                i++;
+            }
+        }
+        else {
+            if (c != ',' and c != '\n') {
+                isSudokuValueFixed[i - 81] = (c == '1');
+                i++;
+            }
+            else if (i == 162) {
+                break;
+            }
+        }
+    }
+
+    if (selected) {
+        *selected=NULL;
+        sudokuColors.fill("white",81);
+    }
+    emit sudokuValuesChanged();
+    emit sudokuColorsChanged();
+    emit sudokuGridChanged(); // Reset bold and unaccessible cells QML side
+}
