@@ -28,6 +28,7 @@ public:
     Q_INVOKABLE void setFinalColors();
     Q_INVOKABLE void saveGrid();
     Q_INVOKABLE void loadSavedGrid();
+    std::string getCurrentDateTimeString();
 private: // All attributes are private for encapsulation
     QList<int> sudokuValues;
     QList<bool> isSudokuValueFixed;
