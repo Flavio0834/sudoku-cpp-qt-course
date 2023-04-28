@@ -196,7 +196,8 @@ void Grid::changeDifficulty() {
 }
 
 void Grid::saveGrid() {
-    std::string filePath = "..\\grilles\\grille_saved.csv";
+    std::string dateTimeStr = getCurrentDateTimeString();
+    std::string filePath = "..\\grilles\\grille_" + dateTimeStr + ".csv";
 
     std::ofstream output_file(filePath);
 
@@ -273,4 +274,14 @@ void Grid::loadSavedGrid() {
     emit sudokuValuesChanged();
     emit sudokuColorsChanged();
     emit sudokuGridChanged(); // Reset bold and unaccessible cells QML side
+}
+
+std::string Grid::getCurrentDateTimeString()
+{
+    time_t now = time(nullptr);
+    struct tm timeinfo;
+    localtime_s(&timeinfo, &now);
+    char buffer[80];
+    strftime(buffer, sizeof(buffer), "%Y-%m-%d_%H-%M-%S", &timeinfo);
+    return buffer;
 }
